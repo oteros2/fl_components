@@ -21,7 +21,7 @@ final options = const['Targarian', 'Stark', 'Lanister', 'Baratheon'];
           ),*/
          ...options.map((e)=>
           ListTile(
-          leading: const Icon(Icons.warning_amber),
+          trailing: const Icon(Icons.warning_amber),
           title: Text(e),
          )
          ).toList()
