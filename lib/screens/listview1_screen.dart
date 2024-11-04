@@ -14,23 +14,17 @@ final options = const['Targarian', 'Stark', 'Lanister', 'Baratheon'];
         backgroundColor: Colors.amber,
       ),
       body: ListView(
-        children: const [
-          ListTile(
+        children: [
+          /*ListTile(
             leading: Icon(Icons.share),
             title: Text('Hola mundo'),
-          ),
-           ListTile(
-            leading: Icon(Icons.face),
-            title: Text('Hola mundo'),
-          ),
-           ListTile(
-            leading: Icon(Icons.dangerous),
-            title: Text('Hola mundo'),
-          ),
-           ListTile(
-            leading: Icon(Icons.label_important),
-            title: Text('Hola mundo'),
-          ),
+          ),*/
+         ...options.map((e)=>
+          ListTile(
+          leading: const Icon(Icons.warning_amber),
+          title: Text(e),
+         )
+         ).toList()
         ],
       )
     );
