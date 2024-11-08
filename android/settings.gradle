@@ -23,6 +23,4 @@ plugins {
 }
 
 include ':app'
-setBinding(new Binding([gradle: this]))
-apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
