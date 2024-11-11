@@ -11,7 +11,7 @@ final options = const['Targarian', 'Stark', 'Lanister', 'Baratheon'];
     return Scaffold(
       appBar: AppBar(
         title: const Text('ListView tipo 1'),
-        backgroundColor: Colors.amber,
+        //backgroundColor: Colors.amber,
       ),
       body: ListView(
         children: [
