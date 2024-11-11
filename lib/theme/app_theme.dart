@@ -8,14 +8,13 @@ static final ThemeData lightTheme = ThemeData.light().copyWith(
         //AppBar Theme
         appBarTheme: const AppBarTheme(
           color: primary,
-          titleTextStyle: TextStyle(
-            color: Colors.white,
-            fontSize: 30,
-          )
+          titleTextStyle: TextStyle(color: Colors.white, fontSize: 30,),
+          iconTheme: IconThemeData(color: Colors.white),
         ),
+        //ListTile theme
         listTileTheme: const ListTileThemeData(
           iconColor: primary,
-        )
+        ), 
 );
  
  }
