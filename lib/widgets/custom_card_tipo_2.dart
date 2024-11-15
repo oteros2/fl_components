@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CustomCardTipo2 extends StatelessWidget {
-  const CustomCardTipo2({super.key});
+  
+  final String imageUrl;
+  final String? title;
+
+  const CustomCardTipo2({super.key, required this.imageUrl, this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -12,18 +16,19 @@ class CustomCardTipo2 extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       child: Column(
         children: [
-          const FadeInImage(
-            image: NetworkImage('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2019/08/peliculas-star-wars.jpg?tf=3840x'), 
-            placeholder: AssetImage('assets/carga.gif'),
+          FadeInImage(
+            //image: NetworkImage('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2019/08/peliculas-star-wars.jpg?tf=3840x'),
+            image: NetworkImage(imageUrl), 
+            placeholder: const AssetImage('assets/carga.gif'),
             width: double.infinity,
             height: 260,
             fit:BoxFit.cover,
-            fadeInDuration: Duration(milliseconds: 3000),
+            fadeInDuration: const Duration(milliseconds: 3000),
             ),
             Container(
               alignment: AlignmentDirectional.centerEnd,
               padding: const EdgeInsets.only(top: 10, bottom: 10, right: 20),
-              child: const Text('Star Wars')
+              child: Text(title ?? 'Desconocido')
               )
           ],
       ),
