@@ -25,6 +25,8 @@ class CustomCardTipo2 extends StatelessWidget {
             fit:BoxFit.cover,
             fadeInDuration: const Duration(milliseconds: 3000),
             ),
+            
+            if (title != null)
             Container(
               alignment: AlignmentDirectional.centerEnd,
               padding: const EdgeInsets.only(top: 10, bottom: 10, right: 20),

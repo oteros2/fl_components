@@ -14,7 +14,7 @@ class Listview2Screen extends StatelessWidget {
         ),
         body: ListView.separated(
             itemBuilder: (context, index) => ListTile(
-                  trailing: const Icon(Icons.dangerous),
+                  trailing: const Icon(Icons.adb_rounded),
                   title: Text(options[index]),
                   onTap: () {
                     final casa = options[index];

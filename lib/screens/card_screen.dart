@@ -2,7 +2,7 @@ import 'package:fl_componentes/widgets/widgets.dart';
 import 'package:flutter/material.dart'; 
 
 class CardScreen extends StatelessWidget {
-  const CardScreen({Key? key}) : super(key: key);
+  const CardScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class CardScreen extends StatelessWidget {
             SizedBox(height: 10),
             CustomCardTipo2(imageUrl: 'https://sm.ign.com/ign_es/photo/u/upcoming-n/upcoming-new-star-wars-movies-and-tv-shows-2024-release-date_6du5.jpg', title: "The Mandalorian",),
             SizedBox(height: 10),
-            CustomCardTipo2(imageUrl: 'https://media.vandal.net/m/10-2024/1/20241019263692_1.jpg', title: "Star Wars Outlaws",),
+            CustomCardTipo2(imageUrl: 'https://media.vandal.net/m/10-2024/1/20241019263692_1.jpg', title: "Star Wars",),
             SizedBox(height: 10),
             CustomCardTipo2(imageUrl: 'https://i.blogs.es/c5514f/the-last-jedi/1366_2000.jpg'),
             ],
