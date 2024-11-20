@@ -1,5 +1,6 @@
 import 'package:fl_componentes/widgets/card_got.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BaratheonScreen extends StatelessWidget {
    
@@ -8,7 +9,7 @@ class BaratheonScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Casa Baratheon')),
+      appBar: AppBar(title: Text('Baratheon', style: GoogleFonts.cinzel()), backgroundColor: const Color.fromARGB(255, 230, 183, 39),),
       body: const CardGot(
         imageUrl: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzU3OjcrxogE3O5Xya_ySKp3d8fU1ymbJebwYgz3bCZMRWuHXLeZR18jZnr9E2E0dBdMjtT7lPjsLTNDOeiXW3MaqSbU3Aq1tBU2BrNGhuyOXtEXLKxZEuu-pM_Q9VLKI87U-KR9ugjmJB/s1600/casa+baratheon.jpg', 
         title: "Casa Baratheon", 

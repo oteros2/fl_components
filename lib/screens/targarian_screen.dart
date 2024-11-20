@@ -1,5 +1,6 @@
 import 'package:fl_componentes/widgets/card_got.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TargarianScreen extends StatelessWidget {
    
@@ -8,7 +9,7 @@ class TargarianScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Casa Targarian')),
+      appBar: AppBar(title: Text('Targarian', style: GoogleFonts.cinzel()), backgroundColor: Colors.black,),
       body: const CardGot(
       imageUrl: 'https://historiacalamitatum312963679.wordpress.com/wp-content/uploads/2020/03/anuncian_fecha_de_estreno_para_precuela_de_game_of_thrones_2_0-e1583106888926.jpg?w=1200', 
       title: "Casa Targarian", 

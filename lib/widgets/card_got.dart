@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CardGot extends StatelessWidget {
   
@@ -19,21 +20,22 @@ class CardGot extends StatelessWidget {
         children: [
              Container(
               alignment: AlignmentDirectional.center,
-              padding: const EdgeInsets.only(top: 10, bottom: 10, right: 20),
-              child: Text(title),
+              padding: const EdgeInsets.all(20),
+              child: Text(title , style: GoogleFonts.cinzel(fontSize: 40)),
               ),
           FadeInImage(
             image: NetworkImage(imageUrl), 
             placeholder: const AssetImage('assets/carga.gif'),
             width: double.infinity,
-           
             fit:BoxFit.cover,
             fadeInDuration: const Duration(milliseconds: 1500),
             ),
               Container(
               alignment: AlignmentDirectional.center,
-              padding: const EdgeInsets.only(top: 10, bottom: 10, right: 20),
-              child: Text(description),
+              padding: const EdgeInsets.all(20),
+              child: Text(description, 
+              style: GoogleFonts.cinzel(fontSize: 20),
+              textAlign: TextAlign.justify,),
               )
           ],
       ),
