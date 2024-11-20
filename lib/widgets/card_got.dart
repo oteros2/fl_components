@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 class CardGot extends StatelessWidget {
   
   final String imageUrl;
-  final String? title;
+  final String title;
+  final String description;
 
-  const CardGot({super.key, required this.imageUrl, this.title});
+  const CardGot({super.key, required this.imageUrl,  required this.title,required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -16,20 +17,23 @@ class CardGot extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       child: Column(
         children: [
+             Container(
+              alignment: AlignmentDirectional.center,
+              padding: const EdgeInsets.only(top: 10, bottom: 10, right: 20),
+              child: Text(title),
+              ),
           FadeInImage(
             image: NetworkImage(imageUrl), 
             placeholder: const AssetImage('assets/carga.gif'),
             width: double.infinity,
-            height: 260,
+           
             fit:BoxFit.cover,
-            fadeInDuration: const Duration(milliseconds: 3000),
+            fadeInDuration: const Duration(milliseconds: 1500),
             ),
-            
-            if (title != null)
-            Container(
-              alignment: AlignmentDirectional.centerEnd,
+              Container(
+              alignment: AlignmentDirectional.center,
               padding: const EdgeInsets.only(top: 10, bottom: 10, right: 20),
-              child: Text(title ?? 'Desconocido')
+              child: Text(description),
               )
           ],
       ),
