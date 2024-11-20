@@ -50,6 +50,4 @@ class AppRoutes {
           builder: (context) => const AlertScreen()
         );
       }
-  
-
 }

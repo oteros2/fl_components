@@ -18,7 +18,12 @@ class Listview2Screen extends StatelessWidget {
                   title: Text(options[index]),
                   onTap: () {
                     final casa = options[index];
-                    print(casa);
+                    switch (casa){
+                      case 'Targarian' : print(casa); break;
+                      case 'Stark' : print (casa); break;
+                      case 'Lanister' : print (casa); break;
+                      case 'Baratheon' :print (casa); break;
+                    }
                   },
                 ),
             separatorBuilder: (context, index) => const Divider(),
