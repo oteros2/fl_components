@@ -1,3 +1,4 @@
+import 'package:fl_componentes/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 class Listview2Screen extends StatelessWidget {
@@ -19,10 +20,18 @@ class Listview2Screen extends StatelessWidget {
                   onTap: () {
                     final casa = options[index];
                     switch (casa){
-                      case 'Targarian' : print(casa); break;
-                      case 'Stark' : print (casa); break;
-                      case 'Lanister' : print (casa); break;
-                      case 'Baratheon' :print (casa); break;
+                      case 'Targarian' : Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const TargarianScreen()),); 
+                      break;
+                      case 'Stark' : Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const StarkScreen()),); 
+                      break;
+                      case 'Lanister' : Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const LanisterScreen()),); 
+                      break;
+                      case 'Baratheon' : Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const BaratheonScreen()),); 
+                      break;
                     }
                   },
                 ),

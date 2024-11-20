@@ -3,3 +3,7 @@ export 'package:fl_componentes/screens/card_screen.dart';
 export 'package:fl_componentes/screens/home_screen.dart';
 export 'package:fl_componentes/screens/listview1_screen.dart';
 export 'package:fl_componentes/screens/listview2_screen.dart';
+export 'package:fl_componentes/screens/targarian_screen.dart';
+export 'package:fl_componentes/screens/lanister_screen.dart';
+export 'package:fl_componentes/screens/stark_screen.dart';
+export 'package:fl_componentes/screens/baratheon_screen.dart';
