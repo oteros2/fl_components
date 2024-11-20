@@ -21,7 +21,7 @@ class CardGot extends StatelessWidget {
              Container(
               alignment: AlignmentDirectional.center,
               padding: const EdgeInsets.all(20),
-              child: Text(title , style: GoogleFonts.cinzel(fontSize: 40)),
+              child: Text(title , style: GoogleFonts.cinzel(fontSize: 30)),
               ),
           FadeInImage(
             image: NetworkImage(imageUrl), 
@@ -34,7 +34,7 @@ class CardGot extends StatelessWidget {
               alignment: AlignmentDirectional.center,
               padding: const EdgeInsets.all(20),
               child: Text(description, 
-              style: GoogleFonts.cinzel(fontSize: 20),
+              style: GoogleFonts.cinzel(fontSize: 13),
               textAlign: TextAlign.justify,),
               )
           ],
