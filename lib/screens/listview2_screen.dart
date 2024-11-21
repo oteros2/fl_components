@@ -15,7 +15,7 @@ class Listview2Screen extends StatelessWidget {
         ),
         body: ListView.separated(
             itemBuilder: (context, index) => ListTile(
-                  trailing: const Icon(Icons.adb_rounded),
+                  trailing: Image.asset("assets/png-clipart-games-of-thrones-folders-game-of-thrones-season-1-folder-icon-removebg-preview.png"),
                   title: Text(options[index]),
                   onTap: () {
                     final casa = options[index];

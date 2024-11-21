@@ -25,9 +25,9 @@ class CardGot extends StatelessWidget {
               ),
           FadeInImage(
             image: NetworkImage(imageUrl), 
-            placeholder: const AssetImage('assets/carga.gif'),
+            placeholder: const AssetImage('assets/got.gif'),
             width: double.infinity,
-            height: 500,
+            height: 400,
             fit:BoxFit.cover,
             fadeInDuration: const Duration(milliseconds: 1500),
             ),
@@ -35,7 +35,7 @@ class CardGot extends StatelessWidget {
               alignment: AlignmentDirectional.center,
               padding: const EdgeInsets.all(20),
               child: Text(description, 
-              style: GoogleFonts.cinzel(fontSize: 15),
+              style: GoogleFonts.cinzel(fontSize: 14),
               textAlign: TextAlign.justify,),
               )
           ],
