@@ -27,7 +27,7 @@ class CardGot extends StatelessWidget {
             image: NetworkImage(imageUrl), 
             placeholder: const AssetImage('assets/got.gif'),
             width: double.infinity,
-            height: 400,
+            height: 350,
             fit:BoxFit.cover,
             fadeInDuration: const Duration(milliseconds: 1500),
             ),
