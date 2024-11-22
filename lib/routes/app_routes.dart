@@ -21,7 +21,7 @@ class AppRoutes {
       route: 'listview2', 
       icon: Icons.list, 
       name: 'Listview tipo 2', 
-      screen: const Listview2Screen()),
+      screen:  Listview2Screen()),
     MenuOption(
       route: 'alert', 
       icon: Icons.add_alert_outlined, 

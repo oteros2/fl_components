@@ -6,12 +6,14 @@ class GotScreen extends StatelessWidget {
   final String name;
   final String imageUrl;
   final String description;
+  final Color color;
 
   const GotScreen({
     super.key,
     required this.name,
     required this.imageUrl,
     required this.description,
+    required this.color
   });
 
   @override
@@ -19,14 +21,14 @@ class GotScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text(name, style: GoogleFonts.cinzel()),
-          backgroundColor: const Color.fromARGB(255, 230, 183, 39),
+          backgroundColor: color
         ),
         body:  CardGot(
             title: name,
             imageUrl: imageUrl,
             description: description),
         floatingActionButton: FloatingActionButton(
-            backgroundColor: const Color.fromARGB(255, 230, 183, 39),
+            backgroundColor: color,
             child: const Icon(Icons.arrow_back_outlined),
             onPressed: () => Navigator.pop(context)));
   }
