@@ -18,16 +18,11 @@ class CardGot extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       child: Column(
         children: [
-             Container(
-              alignment: AlignmentDirectional.center,
-              padding: const EdgeInsets.all(20),
-              child: Text(title , style: GoogleFonts.cinzel(fontSize: 30)),
-              ),
           FadeInImage(
             image: NetworkImage(imageUrl), 
             placeholder: const AssetImage('assets/got.gif'),
             width: double.infinity,
-            height: 350,
+            height: 500,
             fit:BoxFit.cover,
             fadeInDuration: const Duration(milliseconds: 1500),
             ),
