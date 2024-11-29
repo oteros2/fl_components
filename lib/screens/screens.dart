@@ -5,3 +5,4 @@ export 'package:fl_componentes/screens/listview1_screen.dart';
 export 'package:fl_componentes/screens/listview2_screen.dart';
 export 'package:fl_componentes/screens/avatar_screen.dart';
 export 'package:fl_componentes/screens/animated_screen.dart';
+export 'package:fl_componentes/screens/input_screens.dart';

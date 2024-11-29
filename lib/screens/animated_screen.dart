@@ -1,6 +1,4 @@
 import 'dart:math';
-
-import 'package:fl_componentes/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedScreen extends StatefulWidget {
