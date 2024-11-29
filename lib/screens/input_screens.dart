@@ -1,3 +1,4 @@
+import 'package:fl_componentes/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class InputScreen extends StatelessWidget {
@@ -9,39 +10,29 @@ class InputScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Forms: Inputs'),
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Column(
           children: [
-            TextFormField(
-              autofocus: true,
-              //initialValue: 'Jose Oteros',
-              textCapitalization: TextCapitalization.words,
-              onChanged: (value){
-                print('value: $value');
-              },
-              validator: (value){
-                if(value!.length < 3){
-                  return 'Mínimo 3 caracteres';
-                }
-              },
-              autovalidateMode: AutovalidateMode.onUserInteraction,
-              decoration: InputDecoration(
-                hintText: 'Nombre y apellidos',
-                labelText: 'Nombre y apellidos',
-                helperText: 'Solo letras',
-                suffixIcon: const Icon(Icons.person),
-                icon: const Icon(Icons.verified_user_sharp),
-                /*border: OutlineInputBorder(
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(10),
-                    topRight: Radius.circular(10),
-                  ),
-                )*/
-              ),
-            )],
+            CustomTextFormField(
+              hintText: 'Nombre',
+              labelText: 'Nombre',
+              helperText: 'Solo letras',
+              icon: Icons.person_pin_rounded,
+              suffixIcon: Icons.person,
+            ),
+            SizedBox(height: 30,),
+             CustomTextFormField(
+              hintText: 'Apellidos',
+              labelText: 'Apellidos',
+              helperText: 'Solo letras',
+              icon: Icons.person_pin_rounded,
+              suffixIcon: Icons.person,
+            ),
+            ],
         ),
       ),
     );
   }
 }
+

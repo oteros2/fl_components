@@ -44,7 +44,7 @@ class AppRoutes {
         screen: const AnimatedScreen()),
     MenuOption(
         route: 'inputs',
-        icon: Icons.abc,
+        icon: Icons.input,
         name: 'Inputs Screen',
         screen: const InputScreen()),
   ];
