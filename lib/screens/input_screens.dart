@@ -6,30 +6,81 @@ class InputScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final myFormKey = GlobalKey<FormState>();
+
+    final Map<String, String> formValues = {
+      'nombre': 'Andres',
+      'apellido': 'Iniesta',
+      'emai': 'iniesta@gmail.com',
+      'password': '123456',
+      'role': 'usuario'
+    };
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Forms: Inputs'),
       ),
-      body: const SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: Column(
-          children: [
-            CustomTextFormField(
-              hintText: 'Nombre',
-              labelText: 'Nombre',
-              helperText: 'Solo letras',
-              icon: Icons.person_pin_rounded,
-              suffixIcon: Icons.person,
-            ),
-            SizedBox(height: 30,),
-             CustomTextFormField(
-              hintText: 'Apellidos',
-              labelText: 'Apellidos',
-              helperText: 'Solo letras',
-              icon: Icons.person_pin_rounded,
-              suffixIcon: Icons.person,
-            ),
-            ],
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        child: Form(
+          key: myFormKey,
+          child: Column(
+            children: [
+              const SizedBox(height: 20),
+              CustomTextFormField(
+                hintText: 'Nombre',
+                labelText: 'Nombre',
+                helperText: 'Solo letras',
+                icon: Icons.person_add_rounded,
+                obscureText: false,
+                formProperty: 'nombre',
+                formValues: formValues,
+              ),
+              const SizedBox(height: 20),
+               CustomTextFormField(
+                hintText: 'Apellidos',
+                labelText: 'Apellidos',
+                icon: Icons.person_add_sharp,
+                obscureText: false,
+                formProperty: 'apellidos',
+                formValues: formValues,
+              ),
+                const SizedBox(height: 20),
+               CustomTextFormField(
+                hintText: 'Email',
+                labelText: 'Email de usuario',
+                icon: Icons.email_rounded,
+                keyboardType: TextInputType.emailAddress,
+                obscureText: false,
+                formProperty: 'email',
+                formValues: formValues,
+              ),
+               const SizedBox(height: 20),
+               CustomTextFormField(
+                hintText: 'Contraseña',
+                labelText: 'Contraseña',
+                icon: Icons.password,
+                obscureText: true,
+                formProperty: 'contraseña',
+                formValues: formValues,
+              ),
+               const SizedBox(height: 20),
+               ElevatedButton(
+                onPressed: (){
+                  FocusScope.of(context).requestFocus(FocusNode());
+                  if(!myFormKey.currentState!.validate()){
+                    print('Formluario no valido');
+                    return;
+                  }                            
+                }, 
+                child: const SizedBox(
+                  width: double.infinity,
+                  child: Center(child: Text('Enviar'))
+                  ),
+                )
+              ],
+          ),
         ),
       ),
     );
