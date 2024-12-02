@@ -1,6 +1,5 @@
 import 'package:fl_componentes/models/menu_option.dart';
 import 'package:flutter/material.dart';
-
 import '../screens/screens.dart';
 
 class AppRoutes {
@@ -47,6 +46,11 @@ class AppRoutes {
         icon: Icons.input,
         name: 'Inputs Screen',
         screen: const InputScreen()),
+    MenuOption(
+        route: 'slider',
+        icon: Icons.arrow_circle_down_outlined,
+        name: 'Slider Screen',
+        screen: const SliderScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
