@@ -17,6 +17,8 @@ class InputScreen extends StatelessWidget {
       'role': 'usuario'
     };
 
+    bool _chekEnabled = true;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Forms: Inputs'),
@@ -64,6 +66,25 @@ class InputScreen extends StatelessWidget {
                 obscureText: true,
                 formProperty: 'contraseña',
                 formValues: formValues,
+              ),
+               const SizedBox(height: 20),
+               DropdownButtonFormField(
+                items:const [
+                      DropdownMenuItem(value: 'usuario', child: Text('Usuario')),
+                      DropdownMenuItem(value: 'admin', child: Text('Admin')),
+                    ],
+                onChanged: (value){
+                  print(value);
+                  formValues['role'] = value ?? 'usuario';
+                }
+              ),
+              const SizedBox(height: 20),
+              Checkbox(
+                value: _chekEnabled,
+                onChanged: (value) {
+                _chekEnabled = value ?? true;
+                
+                },
               ),
                const SizedBox(height: 20),
                ElevatedButton(
