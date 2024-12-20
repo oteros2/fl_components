@@ -55,7 +55,6 @@ class AppTheme {
         borderRadius: BorderRadius.circular(10),
       ),
     ),
-
     sliderTheme: const SliderThemeData(
       activeTrackColor: primary,
       thumbColor: primary,
