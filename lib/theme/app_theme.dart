@@ -60,6 +60,6 @@ class AppTheme {
       thumbColor: primary,
       valueIndicatorColor: primary,
       valueIndicatorTextStyle: TextStyle(color: primary),
-    )
+    ), 
   );
 }
